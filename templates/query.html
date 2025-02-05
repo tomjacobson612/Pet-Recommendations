@@ -1,0 +1,58 @@
+{% extends "layout.html" %} {% block content %}
+<div class="form_container">
+  <h2>Dog Profile</h2>
+  <form
+    action="{{ url_for('query') }}"
+    method="POST"
+    enctype="multipart/form-data"
+    class="query_form"
+    onsubmit="return validateForm()"
+  >
+    <div class="form_text_container">
+      <p><input type="file" name="image file" id="image_file" accept="image/*"/></p>
+      <p>Image URL: <input type="text" id="url" name="url" placeholder="If no image file."/></p>
+
+      <h3>
+        Optional Information
+      </h3>
+      <div>
+        <p>Age: <input type="text" name="age" placeholder="10" /></p>
+        <p>
+          Activity Level:
+          <select name="activity_level">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </p>
+        <p>
+          Additional Information:
+          <textarea
+            name="additional_info"
+            rows="4"
+            cols="40"
+            placeholder="Provide any additional details you wish to have considered in the recommendation."
+          ></textarea>
+        </p>
+      </div>
+      <p>
+        <button type="submit" class=button>Find Breed and give recommendations!</button>
+      </p>
+    </div>
+  </form>
+</div>
+
+<script>
+  function validateForm() {
+      const url = document.getElementById('url').value;
+      const image_file = document.getElementById('image_file').files.length;
+      
+      if (!url && !image_file) {
+          alert("Please provide either an image file or a URL.");
+          return false;
+      }
+      return true;
+  }
+  </script>
+{% endblock %}
+</body>

@@ -1,0 +1,149 @@
+body {
+  font-family: "Helvetica", sans-serif;
+  font-size: 20px;
+  color: #080908;
+  background-color: grey;
+}
+
+h1 {
+  color: black;
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white,
+    -1px 1px 0 white;
+}
+
+.adoption_header {
+  text-align: center;
+}
+
+.results_container {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+
+  border-style: double;
+  border-color: #080908;
+  border-width: 5px;
+  background-color: #ddd;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+.image-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.dog_picture {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.detected_breed {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.recommendation_header {
+  text-align: center;
+}
+
+.recommendation_list {
+  list-style: square;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.recommendation_bullet {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+.form_link {
+  text-align: center;
+}
+
+a:visited {
+  text-align: center;
+  color: blue;
+}
+
+.form_container {
+  width: 90%;
+  max-width: 600px;
+  height: 90%;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  border-style: double;
+  border-color: #080908;
+  border-width: 5px;
+  background-color: #ddd;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form_text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .results_body {
+    height: 90vh;
+    max-width: 90%;
+  }
+
+  .recommendation_list {
+    max-height: 24vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .results_body {
+    height: 90vh;
+    max-width: 600px;
+  }
+
+  .recommendation_list {
+    max-height: 40vh;
+  }
+}
+
+@media (min-width: 1300px) {
+  .results_body {
+    height: 90vh;
+    max-width: 600px;
+  }
+
+  .recommendation_list {
+    max-height: 45vh;
+  }
+}

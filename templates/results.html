@@ -1,0 +1,19 @@
+{% extends "layout.html" %} {% block content %}
+<body>
+  <div class="results_container">
+    <div class="image-container">
+      <img src="{{ image }}" alt="Dog Image" class="dog_picture" />
+    </div>
+    <h2 class="detected_breed">The detected breed is: {{ breed }}</h2>
+    <h3 class="recommendation_header">Our recommendation is:</h3>
+    <ul class="recommendation_list">
+      {% for bulletpoint in recommendation %}
+      <li class="recommendation_bullet">{{ bulletpoint }}</li>
+      {% endfor %}
+    </ul>
+    <h3 class="form_link">
+      <a href="{{ url_for('query') }}">Query again.</a>
+    </h3>
+  </div>
+</body>
+{% endblock %}
