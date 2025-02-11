@@ -1,3 +1,6 @@
+# Program Description
+This program allows users to upload an image either from the web or from their local storage. The program then analyzes the image to determine the breed of dog present and sends that breed information to an AI that constructs personalized pet recommendations. The recommendation prompt can be further edited by the user via a web based form. 
+
 # How to run locally
 - Run "python3 -m venv venv" in your terminal to create a virtual environment folder named venv.
 
